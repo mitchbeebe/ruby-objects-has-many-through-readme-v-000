@@ -21,6 +21,6 @@ class Customer
   end
   
   def waiters
-    Meal.all.collect { |m| m.waiter if m.customer == self}
+    Meal.all.each { |m| m.waiter if m.customer == self}
   end
 end
