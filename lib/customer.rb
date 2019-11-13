@@ -21,6 +21,6 @@ class Customer
   end
   
   def waiters
-    Meal.all.find { |m| m.waiter if m.customer == self }
+    Meal.all.select { |m| m.waiter if m.customer == self }
   end
 end
