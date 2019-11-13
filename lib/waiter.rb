@@ -26,6 +26,11 @@ class Waiter
     best_tip = 0
     best_cust = nil
     Meal.all.each do |m|
-      if m
+      if m.tip > best_tip
+        best_tip = m.tip
+        best_cust = m.customer
+      end
+    end
+    best_cust
   end
 end
