@@ -18,4 +18,11 @@ class Waiter
     Meal.new(self, customer, total, tip)
   end
   
+  def meals
+    Meal.all.select { |m| m.waiter == self }
+  end
+  
+  def best_tipper
+    Meal.all.select { |m| m.customer }
+  end
 end
