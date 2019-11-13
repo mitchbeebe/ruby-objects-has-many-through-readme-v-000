@@ -23,6 +23,9 @@ class Waiter
   end
   
   def best_tipper
-    Meal.all.select { |m| m.tip =  }
+    best_tip = 0
+    best_cust = nil
+    Meal.all.each do |m|
+      if m
   end
 end
